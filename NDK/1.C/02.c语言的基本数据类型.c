@@ -4,6 +4,8 @@ java  8大基本数据类型.
 byte short int long char float double boolean
 1     2    4     8   2    4     8      1
 
+特殊的数据类型（类）String ---> 字符序列。（CharSequence） 
+
 C的基本数据类型,
 
 char, int, float, double, signed, unsigned, long, short and void
@@ -22,7 +24,16 @@ main()
       printf("float长度为%d\n",sizeof(float)); 
       printf("double长度为%d\n",sizeof(double)); 
       printf("long长度为%d\n",sizeof(long)); 
-      printf("short长度为%d\n",sizeof(short)); 
+      printf("short长度为%d\n",sizeof(short));
+      printf("signed int 长度为%d\n",sizeof(signed int )); 
+      printf("unsigned int 长度为%d\n",sizeof(unsigned int )); 
+      
+      char arr[] ={'h','e','l','l','o'}; 
+      printf("arr=%s\n",arr);  
+      
+      //char arr2[] = {'h', 'e', 'l', 'l', 'o'};
+     // printf("arr=%s\n", arr2); 
+      
       
       system("pause");
 } 
