@@ -12,6 +12,7 @@ public class MainActivity extends Activity {
 	 */
 	public native String helloFromC();
 	public native String hello_from_c();
+	public native String helloFromJavahC();
 	//5.把要调用的c代码给加载到java虚拟机里面。
 	static{
 		System.loadLibrary("Hello");
@@ -36,5 +37,13 @@ public class MainActivity extends Activity {
 	public void click2(View view) {
 		//6. 调用c代码。
 		Toast.makeText(this, hello_from_c(), Toast.LENGTH_LONG).show();
+	}
+	/**
+	 * 调用底层c代码
+	 * @param view
+	 */
+	public void click3(View view) {
+		//6. 调用c代码。
+		Toast.makeText(this, helloFromJavahC(), Toast.LENGTH_LONG).show();
 	}
 }

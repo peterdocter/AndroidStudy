@@ -5,17 +5,20 @@
     android:orientation="vertical" >
 
     <Button
-        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="click"
         android:text="调用c代码" />
 
     <Button
-        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="click2"
         android:text="调用c代码(下划线)" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="click3"
+        android:text="调用c代码(javah)" />
 
 </LinearLayout>

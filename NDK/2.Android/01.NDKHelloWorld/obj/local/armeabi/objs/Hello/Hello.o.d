@@ -15,7 +15,8 @@
  /cygdrive/d/DevelopmentTools/Android/android-ndk-r7b/platforms/android-14/arch-arm/usr/include/linux/types.h \
  /cygdrive/d/DevelopmentTools/Android/android-ndk-r7b/platforms/android-14/arch-arm/usr/include/machine/kernel.h \
  /cygdrive/d/DevelopmentTools/Android/android-ndk-r7b/platforms/android-14/arch-arm/usr/include/sys/sysmacros.h \
- /cygdrive/d/DevelopmentTools/Android/android-ndk-r7b/platforms/android-14/arch-arm/usr/include/jni.h
+ /cygdrive/d/DevelopmentTools/Android/android-ndk-r7b/platforms/android-14/arch-arm/usr/include/jni.h \
+ /cygdrive/e/GitHub/AndroidStudy/NDK/2.Android/01.NDKHelloWorld/jni/com_czt_ndk_helloworld_MainActivity.h
 
 /cygdrive/d/DevelopmentTools/Android/android-ndk-r7b/platforms/android-14/arch-arm/usr/include/stdio.h:
 
@@ -48,3 +49,5 @@
 /cygdrive/d/DevelopmentTools/Android/android-ndk-r7b/platforms/android-14/arch-arm/usr/include/sys/sysmacros.h:
 
 /cygdrive/d/DevelopmentTools/Android/android-ndk-r7b/platforms/android-14/arch-arm/usr/include/jni.h:
+
+/cygdrive/e/GitHub/AndroidStudy/NDK/2.Android/01.NDKHelloWorld/jni/com_czt_ndk_helloworld_MainActivity.h:
