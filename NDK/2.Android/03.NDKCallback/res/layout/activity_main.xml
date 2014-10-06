@@ -31,4 +31,34 @@
         android:onClick="click2"
         android:text="c调用java的两个int参数的方法" />
 
+    <Button
+        android:id="@+id/button4"
+        android:onClick="click4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button3"
+        android:layout_marginTop="40dp"
+        android:text="c调用另外一个java代码方法" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button4"
+        android:layout_marginTop="27dp"
+        android:onClick="click5"
+        android:text="从activity里面调用调用自己的java代码" />
+
+    <Button
+        android:id="@+id/button6"
+        android:onClick="click6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp"
+        android:text="调用静态的java代码,显示土司"  />
+
 </RelativeLayout>

@@ -16,4 +16,5 @@ public class DataProvider {
 	public native void callMethod1();
 	public native void callMethod2();
 	public native void callMethod3();
+	public native void callMethod4();
 }

@@ -76,3 +76,32 @@ JNIEXPORT void JNICALL Java_com_czt_ndkcallback_DataProvider_callMethod3
 	jmethodID  methodid = (*env)->GetMethodID(env,jclazz,"printString","(Ljava/lang/String;)V");
 	(*env)->CallVoidMethod(env,obj,methodid,(*env)->NewStringUTF(env,"haha from c "));
 }
+JNIEXPORT void JNICALL Java_com_czt_ndkcallback_DataProvider_callMethod4
+(JNIEnv * env, jobject obj){
+	jclass jclazz = (*env)->FindClass(env,"com/czt/ndkcallback/MainActivity");
+	jmethodID  methodid = (*env)->GetMethodID(env,jclazz,"methodInDemoActivity","()V");
+	 //jobject     (*AllocObject)(JNIEnv*, jclass);
+	jobject demoobj = (*env)->AllocObject(env,jclazz);
+	(*env)->CallVoidMethod(env,demoobj,methodid);
+}
+JNIEXPORT void JNICALL Java_com_czt_ndkcallback_MainActivity_callMethod5
+(JNIEnv * env, jobject obj){
+	jclass jclazz = (*env)->FindClass(env,"com/czt/ndkcallback/MainActivity");
+	jmethodID  methodid = (*env)->GetMethodID(env,jclazz,"methodInDemoActivity","()V");
+	 //jobject     (*AllocObject)(JNIEnv*, jclass);
+	(*env)->CallVoidMethod(env,obj,methodid);
+}
+/**
+ * ¾²Ì¬·½·¨µÄÑ°ÕÒ
+ */
+JNIEXPORT void JNICALL Java_com_czt_ndkcallback_MainActivity_callMethod6
+  (JNIEnv * env, jobject obj){
+	jclass jclazz = (*env)->FindClass(env,"com/czt/ndkcallback/MainActivity");
+	//jmethodID  methodid = (*env)->GetMethodID(env,jclazz,"methodInDemoActivity","()V");
+	//jmethodID   (*GetStaticMethodID)(JNIEnv*, jclass, const char*, const char*);
+	jmethodID  methodid =  (*env)->GetStaticMethodID(env,jclazz,"showToast","(Landroid/content/Context;Ljava/lang/String;)V");
+//   void        (*CallStaticVoidMethod)(JNIEnv*, jclass, jmethodID, ...);
+	(*env)->CallStaticVoidMethod(env,jclazz,methodid,obj,(*env)->NewStringUTF(env,"haha from static method"));
+
+
+}
