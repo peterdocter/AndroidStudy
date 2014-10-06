@@ -19,7 +19,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/button2"
         android:layout_marginTop="28dp"
-        android:text="c调用java的两个int参数的方法" />
+        android:text="c调用java的string参数的方法" />
 
     <Button
         android:id="@+id/button2"
@@ -29,6 +29,6 @@
         android:layout_below="@+id/button1"
         android:layout_marginTop="24dp"
         android:onClick="click2"
-        android:text="c调用java的string参数的方法" />
+        android:text="c调用java的两个int参数的方法" />
 
 </RelativeLayout>

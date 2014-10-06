@@ -44,7 +44,11 @@ JNIEXPORT void JNICALL Java_com_czt_ndkcallback_DataProvider_callMethod1
  */
 JNIEXPORT void JNICALL Java_com_czt_ndkcallback_DataProvider_callMethod2
 (JNIEnv * env, jobject obj){
-
+	jclass jclazz = (*env)->FindClass(env,"com/czt/ndkcallback/DataProvider");
+	jmethodID  methodid = (*env)->GetMethodID(env,jclazz,"add","(II)I");
+	//    jint        (*CallIntMethod)(JNIEnv*, jobject, jmethodID, ...);
+	int result = (*env)->CallIntMethod(env,obj,methodid,3,5);
+	LOGI("result=%d",result);
 }
 
 /*
@@ -54,5 +58,21 @@ JNIEXPORT void JNICALL Java_com_czt_ndkcallback_DataProvider_callMethod2
  */
 JNIEXPORT void JNICALL Java_com_czt_ndkcallback_DataProvider_callMethod3
 (JNIEnv * env, jobject obj){
-
+	jclass jclazz = (*env)->FindClass(env,"com/czt/ndkcallback/DataProvider");
+	/*
+		typedef union jvalue {
+		jboolean    z;
+		jbyte       b;
+		jchar       c;
+		jshort      s;
+		jint        i;
+		jlong       j;
+		jfloat      f;
+		jdouble     d;
+		jobject     l;
+		} jvalue;
+		可以从上面的jni.h定义中看出 签名(Ljava/lang/String;)V中 L：为Object，后面是string的具体描述
+	 */
+	jmethodID  methodid = (*env)->GetMethodID(env,jclazz,"printString","(Ljava/lang/String;)V");
+	(*env)->CallVoidMethod(env,obj,methodid,(*env)->NewStringUTF(env,"haha from c "));
 }
