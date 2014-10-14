@@ -9,10 +9,12 @@ public class MainActivity extends Activity {
 		System.loadLibrary("Hello");
 	}
 	public native String helloFromCpp();
+	public native void sayHelloInCpp(String str);
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		Toast.makeText(this, helloFromCpp(), Toast.LENGTH_LONG).show();
+		sayHelloInCpp("Hello From Java");
 	}
 }

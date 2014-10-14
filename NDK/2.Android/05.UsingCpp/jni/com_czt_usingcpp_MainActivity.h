@@ -15,6 +15,14 @@ extern "C" {
 JNIEXPORT jstring JNICALL Java_com_czt_usingcpp_MainActivity_helloFromCpp
   (JNIEnv *, jobject);
 
+/*
+ * Class:     com_czt_usingcpp_MainActivity
+ * Method:    sayHelloInCpp
+ * Signature: (Ljava/lang/String;)V
+ */
+JNIEXPORT void JNICALL Java_com_czt_usingcpp_MainActivity_sayHelloInCpp
+  (JNIEnv *, jobject, jstring);
+
 #ifdef __cplusplus
 }
 #endif

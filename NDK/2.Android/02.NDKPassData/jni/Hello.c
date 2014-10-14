@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <jni.h>
 #include <android/log.h>
+#include <malloc.h>
+#include <string.h>
 #include "com_czt_ndkpassdata_DataProvider.h"
 #define LOG_TAG "clog"
 #define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__)
